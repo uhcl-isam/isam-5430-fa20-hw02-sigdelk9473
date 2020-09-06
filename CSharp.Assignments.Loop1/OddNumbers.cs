@@ -12,10 +12,25 @@ namespace CSharp.Assignments.Loop1
 
         public static void Main()
         {
-            Console.Error.WriteLine("Enter the starting number");
+            Console.WriteLine("Enter the starting number");
+            int num1 = int.Parse(Console.ReadLine());
             // Codes to enter start
-            Console.Error.WriteLine("Enter the ending number");
+            Console.WriteLine("Enter the ending number");
+            int num2 = int.Parse(Console.ReadLine());
             // Codes to enter end.
+
+            for (int k = num1; k <= num2; k++)
+            
+            {
+                if ((k % 2) != 0)
+                {
+                   Console.WriteLine(k);
+                    k++;
+                }
+                
+                //Console.WriteLine(k);
+                //k++;
+            }
         }
     }
 }

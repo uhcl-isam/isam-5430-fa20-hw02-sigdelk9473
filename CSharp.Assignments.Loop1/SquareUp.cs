@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,31 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            Console.WriteLine("Enter one number");
+            int number = int.Parse(Console.ReadLine());
+            for (int row = 1; row <= number; row++)
+
+            {
+                int c = 0;
+                for (int col = 1; col <= number; col++)
+                {
+
+                    if (col > number - row)
+                    {
+                        Console.Write(row - c);
+                        c++;
+                    }
+                    else
+                    {
+                        Console.Write("0");
+                    }
+                }
+
+                Console.WriteLine("\n");
+            }
+            
+
+            
         }
     }
 }

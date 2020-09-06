@@ -11,7 +11,15 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
-            Console.Error.WriteLine("Enter the value of n");
+            Console.WriteLine("Enter the value of n");
+            int value = int.Parse(Console.ReadLine());
+            int integer = 1;
+            while (integer <= value)
+            {
+                Console.WriteLine(integer);
+                integer++;
+            }
+
             // write your codes here.
         }
     }
