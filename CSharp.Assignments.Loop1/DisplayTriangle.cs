@@ -30,7 +30,73 @@ namespace CSharp.Assignments.Loop1
             int n = Convert.ToInt32(Console.ReadLine());
 
             // Write your codes here.
+
             Console.ReadLine();
+            //triangle == a
+            int row = 0;
+            while (row < n)
+            {
+                int col = 0;
+                while (col <= row)
+                {
+                    Console.Write("*");
+                    col++;
+                }
+                Console.WriteLine();
+                row++;
+            }
+            //Triangle == b
+            int row1 = n;
+            while (0 < n)
+            {
+                int col1 = 0;
+                while (col1 < row1)
+                {
+                    Console.Write("*");
+                    col1++;
+                }
+                Console.WriteLine();
+                row1--;
+            }
+            //triangle == c;
+            for (int row2 = 0; row2 < 10; row2++)
+            {
+                for (int col2 = 0; col2 < 10; col2++)
+                {
+                    if (row2 > col2)
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write("*");
+                    }
+                }
+                Console.WriteLine();
+            }
+            for ( int row3 = 10; 0<row3; row3--)
+            {
+                for ( int col3 = 0; col3<10; col3++ )
+                {
+                    if ( row3 > col3)
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write("*");
+                    }
+
+                }
+                Console.WriteLine();
+            }
+
+            
+            
+            
+
+            
         }
     }
 }
+
