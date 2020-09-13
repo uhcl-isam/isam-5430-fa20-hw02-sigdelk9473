@@ -27,11 +27,14 @@ namespace CSharp.Assignments.Loop1
                     if (col > number - row)
                     {
                         Console.Write(row - c);
+                        Console.Write(", ");
+                          
                         c++;
                     }
                     else
                     {
                         Console.Write("0");
+                        Console.Write(", ");
                     }
                 }
 

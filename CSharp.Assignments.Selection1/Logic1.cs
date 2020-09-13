@@ -16,17 +16,17 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CigarParty(int cigars, bool isWeekend)
         {
-            if (isWeekend && (cigars >=40))
+            if (isWeekend && (cigars >= 40))
             {
                 return true;
             }
-            if (cigars >=40 && cigars <=60)
+            if (cigars >= 40 && cigars <= 60)
             {
                 return true;
             }
             return false;
         }
-        
+
 
         /// <summary>
         /// You are driving a little too fast, and a police officer stops you.Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
@@ -37,7 +37,7 @@ namespace CSharp.Assignments.Loop1
         public static int CaughtSpeeding(int speed, bool birthday)
         {
             //throw new NotImplementedException();
-            
+
             if (speed <= 60)
             {
                 return 0;
@@ -48,7 +48,7 @@ namespace CSharp.Assignments.Loop1
                 {
                     return 1;
                 }
-                if (speed >=86)
+                if (speed >= 86)
                 {
                     return 2;
                 }
@@ -56,15 +56,15 @@ namespace CSharp.Assignments.Loop1
             }
             if (birthday == false)
             {
-                if (speed >=61 && speed <=80)
+                if (speed >= 61 && speed <= 80)
                 {
-                    return  1;
+                    return 1;
                 }
-                if (speed >=81)
+                if (speed >= 81)
                 {
-                    return  2;
+                    return 2;
                 }
-                
+
             }
             return 0;
         }
@@ -102,7 +102,7 @@ namespace CSharp.Assignments.Loop1
         public static bool More20(int num)
         {
             //throw new NotImplementedException();
-            if ( num % 20 == 1 || num % 20 == 2)
+            if (num % 20 == 1 || num % 20 == 2)
             {
                 return true;
             }
@@ -117,7 +117,7 @@ namespace CSharp.Assignments.Loop1
         public static bool NearTen(int num)
         {
             //throw new NotImplementedException();
-            if ( num%10 <=2 || num%10 >=8)
+            if (num % 10 <= 2 || num % 10 >= 8)
             {
                 return true;
             }
@@ -133,7 +133,7 @@ namespace CSharp.Assignments.Loop1
         public static int TeaParty(int tea, int candy)
         {
             //throw new NotImplementedException();
-            if (tea >=5 && candy >=5)
+            if (tea >= 5 && candy >= 5)
             {
                 return 1;
             }
@@ -156,11 +156,11 @@ namespace CSharp.Assignments.Loop1
         public static bool SquirrelPlay(int temperature, bool isSummer)
         {
             //throw new NotImplementedException();
-            if ( !(isSummer) && temperature >=60 && temperature <=90)
+            if (!(isSummer) && temperature >= 60 && temperature <= 90)
             {
                 return true;
             }
-            if ( isSummer && temperature>=60 && temperature <=100)
+            if (isSummer && temperature >= 60 && temperature <= 100)
             {
                 return true;
             }
@@ -181,15 +181,28 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-            throw new NotImplementedException();
-            if ( dayOfWeek ==DayOfWeek.Monday)
-            {
 
-            }
-            if (dayOfWeek.Equals(6) || dayOfWeek.Equals(0)) //weekend
+            //throw new NotImplementedException();
+            //
+            if (dayOfWeek == DayOfWeek.Sunday || dayOfWeek == DayOfWeek.Saturday)
             {
-
+                if (vacation)
+                {
+                    return "off";
+                }
+                return "10:00";
             }
+            else
+            {
+                if (vacation)
+                {
+                    return "10:00";
+                }
+                return "7:00";
+            }
+
+
+
         }
 
 
@@ -215,10 +228,10 @@ namespace CSharp.Assignments.Loop1
             //{
             //    return false;
             //}
-            
+
 
             return false;
-            
+
         }
 
 
@@ -248,17 +261,17 @@ namespace CSharp.Assignments.Loop1
             int diff1 = Math.Abs(a - b);
             int diff2 = Math.Abs(a - c);
             int diff3 = Math.Abs(b - c);
-            if ( (diff1 <= 1) && (diff2>=2) && (diff3 >=2))
+            if ((diff1 <= 1) && (diff2 >= 2) && (diff3 >= 2))
             {
                 return true;
             }
-            else if ((diff2<=1) && (diff1>=2) && (diff3>=2))
+            else if ((diff2 <= 1) && (diff1 >= 2) && (diff3 >= 2))
             {
                 return true;
             }
             return false;
-            
-           
+
+
         }
     }
 }

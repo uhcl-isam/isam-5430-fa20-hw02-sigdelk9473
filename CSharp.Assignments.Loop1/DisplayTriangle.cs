@@ -46,8 +46,8 @@ namespace CSharp.Assignments.Loop1
                 row++;
             }
             //Triangle == b
-            int row1 = n;
-            while (0 < n)
+            int row1 = 10;
+            while (0 < row1)
             {
                 int col1 = 0;
                 while (col1 < row1)
@@ -74,11 +74,11 @@ namespace CSharp.Assignments.Loop1
                 }
                 Console.WriteLine();
             }
-            for ( int row3 = 10; 0<row3; row3--)
+            for (int row3 = 10; 0 < row3; row3--)
             {
-                for ( int col3 = 0; col3<10; col3++ )
+                for (int col3 = 0; col3 < 10; col3++)
                 {
-                    if ( row3 > col3)
+                    if (row3 > col3)
                     {
                         Console.Write(" ");
                     }
@@ -91,11 +91,11 @@ namespace CSharp.Assignments.Loop1
                 Console.WriteLine();
             }
 
-            
-            
-            
 
-            
+
+
+
+
         }
     }
 }

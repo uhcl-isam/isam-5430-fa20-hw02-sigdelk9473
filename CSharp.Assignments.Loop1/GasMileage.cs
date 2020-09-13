@@ -24,6 +24,35 @@ namespace CSharp.Assignments.Loop1
         {
             // prompt user for non-negative miles and obtain the input from user
             // codes go here.
+
+
+
+
+            double miles;
+            double gallons;
+            double totalmiles = 0;
+            double totalgallons = 0;
+           // double average = 0;
+            //double totalaverage = 0;
+
+            while(true)
+            {
+                Console.WriteLine("Enter miles driven(-1 to quit)");
+                miles = double.Parse(Console.ReadLine());
+                if (miles == -1)
+                    break;
+                totalmiles += miles;
+                
+                Console.WriteLine("enter gallons used");
+                gallons = double.Parse(Console.ReadLine());
+                totalgallons += gallons;
+                double average = miles / gallons;
+                double totalaverage = totalmiles / totalgallons;
+
+                Console.WriteLine("The average per trip: {0}", average);
+                Console.WriteLine("The total average is: {0}", totalaverage);
+                
+            }
         }
     }
 }
