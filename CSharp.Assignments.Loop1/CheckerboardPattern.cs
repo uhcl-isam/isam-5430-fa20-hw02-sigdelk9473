@@ -31,6 +31,20 @@ namespace CSharp.Assignments.Loop1
             char fillChar = Char.Parse(Console.ReadLine());
 
             // Write your codes here.
+            for (int i =1; i<=num; i++)
+            {
+                for (int j = 1; j <=num; j++)
+                {
+                    if (i%2!=0)
+                    {
+                        Console.Write(" " + fillChar);
+                    }
+                    else
+                        Console.Write(fillChar + " ");
+                }
+                Console.WriteLine();
+                
+            }
         }
     }
 }
