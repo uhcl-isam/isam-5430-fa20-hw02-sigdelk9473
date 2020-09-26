@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
-    /// Create an app that lets you enter a bunc hof integers until the
+    /// Create an app that lets you enter a bunch of integers until the
     /// end of line with a CTRL-Z. We will say that a "clump" of these numbers
     /// is a series of 2 or more adjacent elements of the same value. The app will
     /// simply print out the number that is the count of these clumps.
@@ -17,6 +18,39 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int clumpsCount = 0;
+            char curr;
+            char prev;
+            Console.WriteLine("Enter a number");
+            string input = Console.ReadLine();
+
+            curr = input[0];
+            prev = input[0];
+            bool reset = true;
+
+
+            for (int i = 0; i < input.Length - 1; i++)
+            {
+                if (curr == prev)
+                {
+                    curr = input[i + 1];
+                    if (curr == prev)
+                    {
+                        if (reset)
+                        {
+                            clumpsCount += 1;
+                            reset = false;
+                        }
+                    }
+                    else
+                    {
+                        reset = true;
+                        prev = curr;
+                    }
+                }
+            }
+
+            Console.WriteLine("clump count: " + clumpsCount);
         }
     }
 }

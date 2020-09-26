@@ -39,7 +39,7 @@ namespace CSharp.Assignments.Loop1
             {
                 Console.WriteLine("Enter miles driven(-1 to quit)");
                 miles = double.Parse(Console.ReadLine());
-                if (miles == -1)
+                if (miles < 0)
                     break;
                 totalmiles += miles;
                 

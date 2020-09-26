@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,46 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Complete your loop codes here.
+
+            int sum = 0;
+            int previous = 0;
+            int diff = 0;
+            while (true)
+            {
+                Console.WriteLine("Enter a positive integer");
+                int current = int.Parse(Console.ReadLine());
+                if (current < 0)
+                {
+                    break;
+                }
+                if (current == 0)
+                {
+                    previous = current;
+                }
+                else
+                {
+                    if (previous >= current)
+                    {
+                        previous = previous + 1;
+                    }
+                    else
+                    {
+                        previous = current;
+                        
+
+                    }
+                    if (previous > 0)
+                    {
+                        diff = previous - current;
+                        if (diff > 0)
+                        {
+                            sum = sum + diff;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(sum);
+
         }
     }
 }

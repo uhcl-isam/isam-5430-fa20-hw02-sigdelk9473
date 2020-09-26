@@ -33,62 +33,74 @@ namespace CSharp.Assignments.Loop1
 
             Console.ReadLine();
             //triangle == a
-            int row = 0;
-            while (row < n)
+            if (t == 'a')
             {
-                int col = 0;
-                while (col <= row)
+                int row = 0;
+                while (row < n)
                 {
-                    Console.Write("*");
-                    col++;
+                    int col = 0;
+                    while (col <= row)
+                    {
+                        Console.Write("*");
+                        col++;
+                    }
+                    Console.WriteLine();
+                    row++;
                 }
-                Console.WriteLine();
-                row++;
             }
             //Triangle == b
-            int row1 = 10;
-            while (0 < row1)
+            if (t == 'b')
             {
-                int col1 = 0;
-                while (col1 < row1)
+                int row1 = n;
+                while (0 < row1)
                 {
-                    Console.Write("*");
-                    col1++;
+                    int col1 = 0;
+                    while (col1 < row1)
+                    {
+                        Console.Write("*");
+                        col1++;
+                    }
+                    Console.WriteLine();
+                    row1--;
                 }
-                Console.WriteLine();
-                row1--;
             }
             //triangle == c;
-            for (int row2 = 0; row2 < 10; row2++)
+            if (t == 'c')
             {
-                for (int col2 = 0; col2 < 10; col2++)
+                for (int row2 = 0; row2 < n; row2++)
                 {
-                    if (row2 > col2)
+                    for (int col2 = 0; col2 < n; col2++)
                     {
-                        Console.Write(" ");
+                        if (row2 > col2)
+                        {
+                            Console.Write(" ");
+                        }
+                        else
+                        {
+                            Console.Write("*");
+                        }
                     }
-                    else
-                    {
-                        Console.Write("*");
-                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
             }
-            for (int row3 = 10; 0 < row3; row3--)
+            if (t == 'd')
             {
-                for (int col3 = 0; col3 < 10; col3++)
+                for (int row3 = n; 0 < row3; row3--)
                 {
-                    if (row3 > col3)
+                    for (int col3 = 0; col3 < n; col3++)
                     {
-                        Console.Write(" ");
-                    }
-                    else
-                    {
-                        Console.Write("*");
-                    }
+                        if (row3 > col3)
+                        {
+                            Console.Write(" ");
+                        }
+                        else
+                        {
+                            Console.Write("*");
+                        }
 
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
             }
 
 

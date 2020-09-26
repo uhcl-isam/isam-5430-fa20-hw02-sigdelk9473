@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -15,20 +17,21 @@ namespace CSharp.Assignments.Loop1
             Console.Error.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
             int end = int.Parse(Console.ReadLine());
             //int fib = 0;
-            int fibNum1 = 0;
-            int fibNum2 = 1;
-            int fibNum3 = 0;
-            
-            Console.Write("{0} {1} ", fibNum1, fibNum2);
-            while ( fibNum3 <=end)
+            int prev = 0;
+            int curr = 1;
+            int temp = 0;
+            //0 1 1 2 3 5 8
+            Console.Write("Fib seq: 0 1 ");
+            while (true)
             {
-                fibNum3 = fibNum1 + fibNum2;
-                Console.Write(fibNum3);
-                Console.Write(" ");
-                fibNum1 = fibNum2;
-                fibNum2 = fibNum3;
-                
-                //fib++;
+                temp = curr;
+                curr = prev + curr;
+                prev = temp;
+                if (curr > end)
+                {
+                    break;
+                }
+                Console.Write(curr + " ");
             }
         }
     }

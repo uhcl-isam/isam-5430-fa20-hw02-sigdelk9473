@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -19,6 +21,55 @@ namespace CSharp.Assignments.Loop1
         {
             // enter sentinel inputs
             // then check the palindrome only once.
+            int num, temp,revNum = 0, rem;
+            while (true)
+            {
+
+                Console.WriteLine("Enter nine digit number");
+                num = int.Parse(Console.ReadLine());
+                //num = 123454321
+                temp = num;
+                if (num > 99999999 && num < 1000000000)
+                {
+                    break;
+                }
+
+            }
+
+
+            while (num > 0)
+            {
+
+
+
+                rem = num % 10;
+                revNum = (revNum * 10) + rem;
+                num = num / 10;
+
+
+
+
+
+            }
+            if (temp == revNum)
+            {
+                Console.WriteLine("The number is Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("The number is not Palindrome");
+            }
+
+
+
+
+
+
+
+
+
+
         }
+
     }
 }

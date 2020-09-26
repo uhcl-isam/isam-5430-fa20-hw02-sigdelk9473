@@ -35,6 +35,11 @@ namespace CSharp.Assignments.Loop1
                 Console.WriteLine("Enter a account number");
                 int AccNum = int.Parse(Console.ReadLine());
 
+                if (AccNum < 0)
+                {
+                    break;
+                }
+
                 Console.WriteLine("Enter a Beginning balance");
                 int BeginBal = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter total Charge");
@@ -53,12 +58,6 @@ namespace CSharp.Assignments.Loop1
                 if (CreditLimit < newBalance)
                 {
                     Console.WriteLine("Credit Limit Exceeded");
-                }
-                if (AccNum < 0)
-                {
-                    break;
-
-                   
                 }
                 Console.WriteLine("The remaining balance is {0} ", RemainingBalance);
 
